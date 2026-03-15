@@ -1,0 +1,7 @@
+sort_vis
+test_build
+*.exe
+*.swp
+*.o
+CLAUDE.md
+test.cpp
