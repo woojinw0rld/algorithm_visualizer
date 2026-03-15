@@ -9,6 +9,6 @@ struct Step{
 	std::vector<bool> sorted;			//완료된 인덱스(초록)
 	int compare_count = 0;
 	int swap_count = 0;
-}
+};
 
 
