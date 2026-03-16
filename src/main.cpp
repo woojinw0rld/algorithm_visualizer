@@ -6,6 +6,7 @@
 #include "visualizer.h"
 
 std::vector<Step> bubble_sort(std::vector<int> array);
+std::vector<Step> selection_sort(std::vector<int> array);
 
 //랜덤한 배열을 만드는 함수(1~100)
 std::vector<int> generate_array(int size){
@@ -64,6 +65,9 @@ int main(){
 	if(algorithm == 1){
 		steps = bubble_sort(array);
 		title = "Bubble Sort";
+	} else if(algorithm == 2){
+		steps = selection_sort(array);
+		title = "Selection Sort";
 	} else {
 		std::cout << "아직 구현 안함. "<< std::endl;
 		return 0;
