@@ -8,7 +8,6 @@ SRCS		=	src/main.cpp \
 			src/selection_sort.cpp \
 			src/insertion_sort.cpp \
 			src/quick_sort.cpp \
-			src/quick_sort.cpp \
 			src/merge_sort.cpp
 $(TARGET): $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) $(LIBS) -o $(TARGET)
