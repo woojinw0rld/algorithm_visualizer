@@ -34,9 +34,12 @@ void play(const std::vector<Step>& steps, const std::string& title){
 
 		//max_elemant()의 반환값은 주소 포인터로 역참조 하여 값만 반환.
 		int max_value = *std::max_element(step.array.begin(), step.array.end());
+
 		int screen_height, screen_width;
 		getmaxyx(stdscr, screen_height, screen_width);
+
 		int bar_height = screen_height -6;
+
 		for(int i = 0; i< (int)step.array.size(); i++){
 			int height = (step.array[i]*bar_height)/max_value;
 
@@ -56,6 +59,7 @@ void play(const std::vector<Step>& steps, const std::string& title){
 			attroff(COLOR_PAIR(color));
 			mvprintw(screen_height - 2, i * 3, "%3d", step.array[i]);
 		}
+		
 		mvprintw(screen_height - 1, 0, "[SPACE] 일시정지  [<-][->] 스텝이동 [+][-] 속도조절 [Q] 종료");
 		refresh();
 
