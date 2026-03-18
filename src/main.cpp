@@ -9,6 +9,7 @@ std::vector<Step> bubble_sort(std::vector<int> array);
 std::vector<Step> selection_sort(std::vector<int> array);
 std::vector<Step> insertion_sort(std::vector<int> array);
 std::vector<Step> quick_sort(std::vector<int> array);
+std::vector<Step> merge_sort(std::vector<int> array);
 
 //랜덤한 배열을 만드는 함수(1~100)
 std::vector<int> generate_array(int size){
@@ -76,7 +77,10 @@ int main(){
 	} else if(algorithm == 4){
 		steps = quick_sort(array);
 		title = "Quick Sort";
-	} else {
+	} else if(algorithm == 5){
+		steps = merge_sort(array);
+		title = "Merge Sort";
+	}else {
 		std::cout << "아직 구현 안함. "<< std::endl;
 		return 0;
 	}
