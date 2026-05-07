@@ -1,14 +1,16 @@
-CXX		=	g++
-CSSFLAGS	=	-Wall -std=c++17
-LIBS		=	-lncurses
-TARGET		=	sort_vis
-SRCS		=	src/main.cpp \
-			src/visualizer.cpp \
-			src/bubble_sort.cpp \
-			src/selection_sort.cpp \
-			src/insertion_sort.cpp \
-			src/quick_sort.cpp \
-			src/merge_sort.cpp
+CXX      = g++
+CXXFLAGS = -Wall -std=c++17 -I/ucrt64/include/ncurses
+LIBS     = -lncursesw
+TARGET   = sort_vis
+SRCS     = src/main.cpp \
+           src/visualizer.cpp \
+           src/SortApp.cpp \
+           src/BubbleSorter.cpp \
+           src/SelectionSorter.cpp \
+           src/InsertionSorter.cpp \
+           src/QuickSorter.cpp \
+           src/MergeSorter.cpp
+
 $(TARGET): $(SRCS)
 	$(CXX) $(CXXFLAGS) $(SRCS) $(LIBS) -o $(TARGET)
 
